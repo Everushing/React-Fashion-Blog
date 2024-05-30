@@ -1,0 +1,123 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+
+  /* Add a pseudo-element before the body content (optional) */
+  ::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Adjust height for full viewport */
+    width: 5px;
+    background-color: lightgray;
+  }
+
+  /* Set min-height for the body */
+  min-height: 100vh;
+
+  /* Max-width for the body (optional, based on your design) */
+  max-width: 1000px;
+  margin: 0 auto;  /* Center the body horizontally (optional) */
+}
+
+.container {
+  /* Max-width can be removed here if set on body */
+  /* margin: 0 auto;  Not needed if set on body */
+  padding: 20px;
+}
+
+/* Add padding to prevent border proximity and margin collapse */
+header,
+main,
+footer {
+  padding: 1rem 2rem; /* 1rem top/bottom, 2rem left/right */
+}
+
+h1 {
+  color: tomato; /* Set h1 color to tomato */
+}
+
+img {
+  width: 100%; /* Set all images to 100% width */
+}
+
+/* Navigation styles */
+.nav,
+.footer-nav {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox for layout */
+}
+
+.nav {
+  justify-content: space-between; /* Spread items evenly in main nav */
+  color: lightgray; /* Set color for links in main nav */
+}
+
+.footer-nav {
+  color: tomato; /* Set color for links in footer nav */
+}
+
+.nav-item,
+.footer-nav-item {
+  margin: 0; /* Remove default margin from list items */
+}
+
+/* Blog post styles */
+article {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 2rem;
+}
+
+article h3 {
+  font-size: 1.5em; /* Increase font size for blog post titles */
+}
+
+.content a[href$=".html"] { /* Target "continues..." links */
+  float: right; /* Align to the right */
+  font-weight: bold;
+  color: tomato;
+  flex: 3;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Drop cap style */
+article p::first-letter {
+  color: lightgray;
+  font-size: 2em; /* Increase drop cap size (adjust as needed) */
+  line-height: 1; /* Adjust line height to avoid overlapping content */
+  float: left; /* Float the drop cap to the left */
+  margin-right: 1rem; /* Add margin between drop cap and text */
+}
+
+
+
+/* Other styles remain the same... */
+
+  .main {
+    padding-top: 40px;
+  }
+  
+  .sidebar {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .copyright {
+    margin: 0;
+    color: lightgray;
+  }
+  
